@@ -24,7 +24,7 @@ function Sidebar({ notes, onAddNote, activeNote, setActiveNote }) {
     }
 
     return (
-        <div className='app-sidebar'>
+        <div className='app-sidebar' id='sidebar1'>
             <div className='app-sidebar-header'>
                 <h1>Notes</h1>
                 <button id='add' onClick={onAddNote}>+</button>

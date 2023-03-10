@@ -19,7 +19,7 @@ function Viewer({ onDeleteNote, activeNote }) {
     if(!activeNote) {return <div className='no-active-note'>Select a note, or create a new one.</div>; }
 
     return (
-        <div className='app-main'>
+        <div className='app-main' id='main1'>
             <div className='app-main-note-edit'>
                 <h1 id= 'title'>{activeNote.title}</h1>
                 <button id='save' onClick={() => editNote(activeNote.id)}>Edit</button>

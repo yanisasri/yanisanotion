@@ -72,10 +72,6 @@ button:hover {
   color: white;
 }
 
-.App button {
-  padding-top: 0;
-}
-
 /* sidebar */
 
 Sidebar.style {
@@ -87,6 +83,10 @@ Sidebar.style {
   height: 100vh;
   padding-top: 90px;
   border-right: 1px solid #ddd;
+}
+
+#sidebar1 {
+  display: list-item;
 }
 
 .app-sidebar-header {
@@ -104,17 +104,21 @@ Sidebar.style {
   height: calc(100vh - 78px);
   overflow-y: scroll;
 }
+
 .app-sidebar-note {
   padding: 25px;
   cursor: pointer;
 }
+
 .sidebar-note-title {
   display: flex;
   justify-content: space-between;
 }
+
 .app-sidebar-note p {
   margin: 10px 0;
 }
+
 .app-sidebar-note small {
   display: block;
   color: #999;
@@ -124,8 +128,7 @@ Sidebar.style {
   background: #e3ddea;
 }
 
-.app-sidebar-note.active,
-.app-sidebar-note.active small {
+.app-sidebar-note.active, .app-sidebar-note.active small {
   background: rgb(93, 75, 119);
   color: white;
 }
@@ -151,7 +154,11 @@ Sidebar.style {
   padding-top: 90px;
 }
 
-.no-active-note {
+#main1 {
+  width: 70%;
+}
+
+#no-active-note {
   width: 70%;
   height: 100vh;
   line-height: 100vh;
@@ -161,6 +168,7 @@ Sidebar.style {
 }
 
 /* edit */
+
 .app-main-note-edit {
   display: block;
   padding: 5px;
@@ -174,8 +182,7 @@ Sidebar.style {
   margin-bottom: 10px;
 }
 
-.app-main-note-edit input,
-textarea {
+.app-main-note-edit input, textarea {
   display: block;
   margin-bottom: 20px;
   width: 100%;

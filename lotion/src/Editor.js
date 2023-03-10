@@ -26,10 +26,10 @@ function Editor({ onDeleteNote, activeNote, onUpdateNote }) {
         navigate(`/`);
     }
 
-    if(!activeNote) {return <div className='no-active-note'>Select a note, or create a new one.</div>; }
+    if(!activeNote) {return <div id='no-active-note'>Select a note, or create a new one.</div>; }
 
     return (
-        <div className='app-main'>
+        <div className='app-main' id='main1'>
             <div className='app-main-note-edit'>
                 <button id='save' onClick={() => onSave(activeNote.id)}>Save</button>
                 <button id='delete' onClick={() => onDelete(activeNote.id)}>Delete</button>
@@ -46,5 +46,5 @@ function Editor({ onDeleteNote, activeNote, onUpdateNote }) {
 export default Editor;
 
 /* 
-
+    save content in reactquill
 */
