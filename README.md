@@ -1,3 +1,5 @@
+all my files are inside the lotion folder
+
 # Lotion
 In this assignment, you will create a Notion-like application named Lotion with HTML, CSS, and React.
 
