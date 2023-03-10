@@ -18,7 +18,6 @@ function Editor({ onDeleteNote, activeNote, onUpdateNote }) {
         navigate(`/notes/${noteId}`);
     }
 
-
     const onDelete = (noteId) => {
         const answer = window.confirm("Are you sure?");
         if (answer) {

@@ -5,7 +5,6 @@ import './App.css';
 import Editor from './Editor.js';
 import Format from './Format.js';
 import Viewer from './Viewer.js';
-import Sidebar from './Sidebar.js';
 
 function App() {
   const exist = localStorage.getItem('notes');
@@ -21,7 +20,7 @@ function App() {
   const onAddNote = () => {
     const newNote = {
       id: uuid(),
-      title: '',
+      title: 'Untitled',
       body: '',
       lastModified: Date.now(),
     };
@@ -36,7 +35,6 @@ function App() {
       return note;
     });
     setNotes(updatedNotes);
-    
   };
 
   const onDeleteNote = (idToDelete) => {
@@ -47,19 +45,10 @@ function App() {
     return notes.find((note) => note.id === activeNote);
   };
 
-  const hideSidebar = () => {
-    if (document.getElementsByName(Sidebar).style.display = 'flex') {
-      document.getElementsByName(Sidebar).style.display = 'none';
-    } else {
-      document.getElementsByName(Sidebar).style.display = '';
-    }
-  }
-
-
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Format notes={notes} onAddNote={onAddNote} activeNote={activeNote} setActiveNote={setActiveNote} hideSidebar={hideSidebar}/>}>
+        <Route element={<Format notes={notes} onAddNote={onAddNote} activeNote={activeNote} setActiveNote={setActiveNote}/>}>
           <Route path='/' element={<Navigate to ='/notes'/>}/>
           <Route path='/notes' element={<Viewer onDeleteNote={onDeleteNote} activeNote={getActiveNote()}/>}/>
           <Route path='/notes/:activeNote/edit' element={<Editor onDeleteNote={onDeleteNote} activeNote={getActiveNote()} onUpdateNote={onUpdateNote}/>}/>
@@ -71,9 +60,3 @@ function App() {
 }
 
 export default App;
-
-/*
-  const [notes, setNotes] = useState(JSON.parse(localStorage.notes) || []);
-
-  confirmation message when deleting note
-*/
