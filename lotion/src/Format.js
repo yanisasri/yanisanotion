@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
 function Format({ notes, onAddNote, activeNote, setActiveNote }) {
+/*
     function changeSidebar() {
         if (document.getElementById('sidebar1').style.display === 'list-item') {
             document.getElementById('sidebar1').style.display = 'none';
@@ -15,12 +16,14 @@ function Format({ notes, onAddNote, activeNote, setActiveNote }) {
         }
     }
 
+    <button id='menu' onClick={changeSidebar()}>&#9776;</button>
+*/
     return (
         <div className='App'>
             <div className='top-bar'>
             <h1 id='head'>Lotion</h1>
             <p id='subhead'>Like Notion, but much worse.</p>
-            <button id='menu' onClick='changeSidebar();'>&#9776;</button>
+            <button id='menu'>&#9776;</button>
             </div>
             <Sidebar notes={notes} onAddNote={onAddNote} activeNote={activeNote} setActiveNote={setActiveNote}/>
             <Outlet/>
